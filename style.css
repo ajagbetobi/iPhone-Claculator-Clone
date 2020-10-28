@@ -1,0 +1,83 @@
+@font-face {
+    font-family: iphoneFont;
+    src: url(/HelveticaNeue\ Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: iphoneFont;
+}
+
+.phone {
+    width: 320px;
+    height: 98vh;
+    background-color: #000;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    color: rgb(251, 255, 251);
+}
+
+.calculator{
+    height: 85%;
+    width: 320px;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+}
+
+.display {
+    font-size: 5rem;
+    text-align: right;
+    padding-right: .1rem;
+    margin-bottom: .3rem;
+    transition: all .25s ease;
+}
+
+.buttons-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(5 , 1fr);
+    grid-gap: .5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+.button{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    background:  #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: filter .3s ease;
+    user-select: none;
+}
+.button:hover{
+    filter: brightness(150%);
+}
+
+.function{
+    color: black;
+    background: #a5a5a5;
+}
+
+.operator{
+    background: chocolate;
+}
+
+.number-0{
+    grid-column: 1/span 2;
+    width: 9rem;
+    border-radius: 3rem;
+}
